@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alternate Row Colors</title>
+    <style>
+        /* Css styles for table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 4, Cell 1</td>
+            <td>Row 4, Cell 2</td>
+            <td>Row 4, Cell 3</td>
+        </tr>
+    </table>
+
+    <script>
+
+        var table = document.getElementById("myTable");
+
+
+        var rows = table.getElementsByTagName("tr");
+
+
+        for (var i = 1; i < rows.length; i++) {
+            // Check if the row index is odd or even
+            if (i % 2 === 0) {
+                // Even row, set background color to red
+                rows[i].style.backgroundColor = "red";
+            } else {
+                // Odd row, set background color to green
+                rows[i].style.backgroundColor = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>
